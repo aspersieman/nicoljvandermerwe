@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>Update projects</h2>
+{{=A(T('show projects'),_href=URL('projects_read',args=request.args(0)))}}
+<br/>
+
+{{=form}}

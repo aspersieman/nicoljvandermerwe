@@ -1,0 +1,300 @@
+(dp0
+S'page_blog_read'
+p1
+S'## Read blog'
+p2
+sS'table_projects'
+p3
+(lp4
+S'name notnull'
+p5
+aS'description notnull'
+p6
+aS'url'
+p7
+aS'screenshot'
+p8
+aS'added_date'
+p9
+aS'added_by_id auth_user'
+p10
+aS'is_final boolean false'
+p11
+asS'page_news_update'
+p12
+S'## Update news'
+p13
+sS'params'
+p14
+(lp15
+(S'title'
+p16
+S'Nicol J. van der Merwe'
+p17
+tp18
+a(S'subtitle'
+p19
+S'My personal site'
+p20
+tp21
+a(S'author'
+p22
+S'Nicol J. van der Merwe'
+p23
+tp24
+a(S'author_email'
+p25
+S'aspersieman@gmail.com'
+p26
+tp27
+a(S'keywords'
+p28
+S'portfolio personal nicoljvandermerwe'
+p29
+tp30
+a(S'description'
+p31
+S'A site for my personal profile; portfolio and projects.'
+p32
+tp33
+a(S'layout_theme'
+p34
+S'Whitelight'
+p35
+tp36
+a(S'database_uri'
+p37
+S'sqlite://storage.sqlite'
+p38
+tp39
+a(S'security_key'
+p40
+S'192f4beb-7cf8-4a6a-8233-d124cfde9ac8'
+p41
+tp42
+a(S'email_server'
+p43
+S'mail.google.com'
+p44
+tp45
+a(S'email_sender'
+p46
+S'nicolvandermerwe@google.com'
+p47
+tp48
+a(S'email_login'
+p49
+S'nicolvandermerwe@gmail.com:N1c0lv4nd3rmerweth3r41n1nsp41n'
+p50
+tp51
+a(S'login_method'
+p52
+S'local'
+p53
+tp54
+a(S'login_config'
+p55
+S''
+p56
+tp57
+asS'page_blog_select'
+p58
+S'## Select blog'
+p59
+sS'table_auth_user'
+p60
+(lp61
+S'username'
+p62
+aS'first_name'
+p63
+aS'last_name'
+p64
+aS'email'
+p65
+aS'password'
+p66
+asS'page_blog_search'
+p67
+S'## Search blog'
+p68
+sS'page_projects_create'
+p69
+S'## Create projects'
+p70
+sS'tables'
+p71
+(lp72
+S'auth_user'
+p73
+aS'news'
+p74
+aS'projects'
+p75
+aS'blog'
+p76
+aS'cv'
+p77
+asS'page_cv_read'
+p78
+S'## Read cv'
+p79
+sS'table_blog'
+p80
+(lp81
+S'title notnull'
+p82
+aS'tags'
+p83
+aS'is_final boolean false'
+p84
+aS'added_date'
+p85
+aS'added_by_id auth_user'
+p86
+aS'post notnull wiki'
+p87
+asS'page_error'
+p88
+S'# Error: the document does not exist'
+p89
+sS'page_blog_update'
+p90
+S'## Update blog'
+p91
+sS'page_blog_create'
+p92
+S'## Create blog'
+p93
+sS'page_projects_select'
+p94
+S'## Select projects'
+p95
+sS'page_cv_search'
+p96
+S'## Search cv'
+p97
+sS'page_cv_create'
+p98
+S'## Create cv'
+p99
+sS'page_projects_search'
+p100
+S'## Search projects'
+p101
+sS'page_projects_update'
+p102
+S'## Update projects'
+p103
+sS'page_news_select'
+p104
+S'## Select news'
+p105
+sS'pages'
+p106
+(lp107
+S'index'
+p108
+aS'error'
+p109
+aS'news_create'
+p110
+aS'news_read'
+p111
+aS'news_update'
+p112
+aS'news_select'
+p113
+aS'news_search'
+p114
+aS'projects_create'
+p115
+aS'projects_read'
+p116
+aS'projects_update'
+p117
+aS'projects_select'
+p118
+aS'projects_search'
+p119
+aS'blog_create'
+p120
+aS'blog_read'
+p121
+aS'blog_update'
+p122
+aS'blog_select'
+p123
+aS'blog_search'
+p124
+aS'cv_create'
+p125
+aS'cv_read'
+p126
+aS'cv_update'
+p127
+aS'cv_select'
+p128
+aS'cv_search'
+p129
+asS'page_news_search'
+p130
+S'## Search news'
+p131
+sS'name'
+p132
+S'init'
+p133
+sS'page_news_create'
+p134
+S'## Create news'
+p135
+sS'page_news_read'
+p136
+S'## Read news'
+p137
+sS'page_index'
+p138
+S'# Welcome to my new app'
+p139
+sS'table_cv'
+p140
+(lp141
+S'title'
+p142
+aS'added_by_id auth_user'
+p143
+aS'added_date datetime'
+p144
+aS'content notnull wiki'
+p145
+aS'version_id int'
+p146
+asS'table_news'
+p147
+(lp148
+S'title notnull'
+p149
+aS'tags'
+p150
+aS'content notnull wiki'
+p151
+aS'added_date'
+p152
+aS'is_final boolean false'
+p153
+aS'added_by_id auth_user'
+p154
+asS'page_projects_read'
+p155
+S'## Read projects'
+p156
+sS'page_cv_select'
+p157
+S'## Select cv'
+p158
+sS'page_cv_update'
+p159
+S'## Update cv'
+p160
+s.

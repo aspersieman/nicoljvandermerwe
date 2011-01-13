@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<h2>Search cv</h2>
+{{=A(T('create new cv'),_href=URL('cv_create'))}}
+<br/>
+
+{{=form}}
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_cv)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<h2>Search news</h2>
+{{=A(T('create new news'),_href=URL('news_create'))}}
+<br/>
+
+{{=form}}
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_news)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

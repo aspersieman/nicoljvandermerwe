@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+
+<h2>Select news</h2>
+{{if request.args:}}<h3>{{=T('For %s #%s' % (request.args(0)[2:],request.args(1)))}}</h3>{{pass}}
+
+{{=A(T('create new news'),_href=URL('news_create'))}}
+<br/>
+
+{{=A(T('search news'),_href=URL('news_search'))}}
+<br/>
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_news)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

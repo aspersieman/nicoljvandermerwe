@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<h2>Search blog</h2>
+{{=A(T('create new blog'),_href=URL('blog_create'))}}
+<br/>
+
+{{=form}}
+
+{{if rows:}}
+  {{headers=dict((str(k),k.label) for k in db.t_blog)}}
+  {{=SQLTABLE(rows,headers=headers)}}
+{{else:}}
+  {{=TAG.blockquote(T('No Data'))}}
+{{pass}}

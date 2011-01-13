@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>Update news</h2>
+{{=A(T('show news'),_href=URL('news_read',args=request.args(0)))}}
+<br/>
+
+{{=form}}
