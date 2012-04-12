@@ -37,9 +37,9 @@ db.define_table('t_blog',
 db.define_table('t_blog_archive',db.t_blog,Field('current_record','reference t_blog'))
 
 ########################################
-db.define_table('t_cv',
+db.define_table('t_resume',
     Field('id','id',
-          represent=lambda id:SPAN(id,' ',A('view',_href=URL('cv_read',args=id)))),
+          represent=lambda id:SPAN(id,' ',A('view',_href=URL('resume_read',args=id)))),
     Field('f_title', type='string',
           label=T('Title')),
     Field('f_added_by_id', type='reference auth_user',
@@ -67,7 +67,7 @@ db.define_table('t_cv',
     format='%(f_title)s',
     migrate=settings.migrate)
 
-db.define_table('t_cv_archive',db.t_cv,Field('current_record','reference t_cv'))
+db.define_table('t_resume_archive',db.t_resume,Field('current_record','reference t_resume'))
 
 ########################################
 db.define_table('t_projects',

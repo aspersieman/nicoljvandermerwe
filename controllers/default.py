@@ -125,38 +125,38 @@ def blog_search():
 
 @auth.requires_login()
 @auth.requires_membership('Admin')
-def cv_create():
-    form=crud.create(db.t_cv,next='cv_read/[id]')
+def resume_create():
+    form=crud.create(db.t_resume,next='resume_read/[id]')
     return dict(form=form)
 
 @auth.requires_login()
 @auth.requires_membership('Admin')
-def cv_read():
-    record = db.t_cv(request.args(0)) or redirect(URL('error'))
-    form=crud.read(db.t_cv,record)
+def resume_read():
+    record = db.t_resume(request.args(0)) or redirect(URL('error'))
+    form=crud.read(db.t_resume,record)
     return dict(form=form)
 
 @auth.requires_login()
 @auth.requires_membership('Admin')
-def cv_update():
-    record = db.t_cv(request.args(0),active=True) or redirect(URL('error'))
-    form=crud.update(db.t_cv,record,next='cv_read/[id]',
-                     ondelete=lambda form: redirect(URL('cv_select')),
+def resume_update():
+    record = db.t_resume(request.args(0),active=True) or redirect(URL('error'))
+    form=crud.update(db.t_resume,record,next='resume_read/[id]',
+                     ondelete=lambda form: redirect(URL('resume_select')),
                      onaccept=crud.archive)
     return dict(form=form)
 
 @auth.requires_login()
 @auth.requires_membership('Admin')
-def cv_select():
+def resume_select():
     f,v=request.args(0),request.args(1)
-    try: query=f and db.t_cv[f]==v or db.t_cv
+    try: query=f and db.t_resume[f]==v or db.t_resume
     except: redirect(URL('error'))
-    rows=db(query)(db.t_cv.active==True).select()
+    rows=db(query)(db.t_resume.active==True).select()
     return dict(rows=rows)
 
 @auth.requires_login()
 @auth.requires_membership('Admin')
-def cv_search():
-    form, rows=crud.search(db.t_cv,query=db.t_cv.active==True)
+def resume_search():
+    form, rows=crud.search(db.t_resume,query=db.t_resume.active==True)
     return dict(form=form, rows=rows)
 

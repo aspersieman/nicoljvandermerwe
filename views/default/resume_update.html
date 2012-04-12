@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>Update resume</h2>
+{{=A(T('show resume'),_href=URL('resume_read',args=request.args(0)))}}
+<br/>
+
+{{=form}}

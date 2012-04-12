@@ -3,7 +3,7 @@ settings = Storage()
 
 settings.migrate = True
 settings.title = "Nicol J. van der Merwe"
-settings.subtitle = "My resumé, curriculum vitae and projects"
+settings.subtitle = "Resumé and projects"
 settings.author = "Nicol J. van der Merwe"
 settings.author_email = "aspersieman@gmail.com"
 settings.keywords = "portfolio personal nicoljvandermerwe resume cv nicol vandermerwe merwe cv"

@@ -376,7 +376,7 @@ h6 {font-size: 0.8em;}
 .auth_navbar {
    top: 0px;
    float: right;
-   padding: 3px 10px 3px 10px; 
+   padding: 3px 10px 3px 1000px; 
 }
 
 /*********** web2py specific ***********/
